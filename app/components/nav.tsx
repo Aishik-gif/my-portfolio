@@ -1,13 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const navItems = {
-  '/': {
-    name: 'home',
+  "/": {
+    name: "home",
   },
-  '/projects': {
-    name: 'projects',
+  "/projects": {
+    name: "projects",
   },
-}
+};
 
 export function Navbar() {
   return (
@@ -27,11 +27,19 @@ export function Navbar() {
                 >
                   {name}
                 </Link>
-              )
+              );
             })}
+            <Link
+              href="resume.pdf"
+              target="_blank"
+              referrerPolicy="no-referrer"
+              className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
+            >
+              resume
+            </Link>
           </div>
         </nav>
       </div>
     </aside>
-  )
+  );
 }
